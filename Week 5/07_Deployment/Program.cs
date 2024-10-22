@@ -88,7 +88,7 @@ internal class Program
     {
         // Assuming the model outputs a tensor of probabilities
         var probabilities = outputTensor.ToArray();
-        var maxIndex = Array.IndexOf(probabilities, probabilities.Max());
+        var maxIndex = Array.IndexOf(probabilities, probabilities.Max()); // argmax
         return maxIndex;
     }
 }
